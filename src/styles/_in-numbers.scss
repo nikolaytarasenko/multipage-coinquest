@@ -1,0 +1,72 @@
+.in-numbers {
+  &__title {
+    margin-bottom: 80px;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 80px!important;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 336px);
+    grid-column-gap: 32px;
+    justify-content: center;
+
+    @include media-breakpoint-down(xl) {
+      grid-template-columns: repeat(3, 280px);
+    }
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: 1fr
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #EBF2FF;
+    border-radius: 4px 4px 0 0;
+    padding: 48px;
+    text-align: center;
+
+    @include media-breakpoint-down(lg) {
+      &:not(:last-child) {
+        margin-bottom: 32px;
+      }
+    }
+  }
+
+  &__icon {
+    margin-bottom: 24px;
+  }
+
+  &__item-title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    color: #00346D;
+    margin-bottom: 24px;
+
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__item-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    text-transform: uppercase;
+    color: #1C1C1C;
+    margin-bottom: 0;
+
+    @include media-breakpoint-down(md) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}

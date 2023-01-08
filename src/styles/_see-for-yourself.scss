@@ -1,0 +1,31 @@
+.see-for-yourself {
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    justify-content: center;
+    margin: 0 100px;
+  }
+
+  &__button {
+    display: block;
+    max-width: 436px;
+    margin: 0 80px;
+    width: 100%;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 20px;
+    border-radius: 35px;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 27px;
+    line-height: 150%;
+    text-align: center;
+    color: #35465B;
+    margin-bottom: 80px;
+  }
+}

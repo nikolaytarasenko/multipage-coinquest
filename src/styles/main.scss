@@ -1,0 +1,640 @@
+@import "fonts.scss";
+@import "libs.scss";
+@import "utils/mixins.scss";
+
+$font-stack: 'Montserrat', sans-serif;
+
+/* Colors */
+$color-dark: #1F2A38;
+$color-white: #FFFFFF;
+$color-green: #009432;
+$color-yellow: #FFB31F;
+$color-dark: #4E4E4E;
+
+@media (min-width: 1400px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1300px;
+  }
+}
+
+html,
+body,
+.wrapper {
+  height: 100%;
+}
+
+body {
+  font-family: $font-stack;
+  font-size: 16px;
+  background: #ffffff;
+
+  &.scrolled {
+    //padding-top: 137px;
+  }
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.15s ease-out;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+
+  @include media-breakpoint-down(md) {
+    text-align: center!important;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.btn {
+  position: relative;
+  border-radius: 4px;
+  transition: 0.15s ease-out;
+
+  &__blue {
+    &:hover,
+    &:active,
+    &:focus {
+      background: #0041BE;
+      color: #ffffff;
+    }
+  }
+
+  &__transparent {
+    background: transparent;
+    border: 3px solid $color-green;
+    color: $color-green;
+    padding: 12px;
+    border-radius: 35px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: #1C5FE0;
+      color: #ffffff;
+      border: 3px solid #1C5FE0;
+    }
+  }
+
+  &__white {
+    background: #FFFFFF;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #00346D;
+    padding: 16px 32px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: #00346D;
+      color: #ffffff;
+    }
+  }
+
+  &__primary {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 19px 16px 19px 96px;
+    overflow: hidden;
+    border: 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background: #0041BE;
+      color: #ffffff;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 136px;
+      height: 136px;
+      background: rgba(0, 0, 0, 0.15);
+      border-radius: 500px;
+      top: 50%;
+      left: -58px;
+      transform: translateY(-50%);
+    }
+
+    svg {
+      position: absolute;
+      left: 15px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1;
+}
+
+//.section {
+//  padding: 80px 0;
+//
+//  @include media-breakpoint-down(md) {
+//    padding: 64px 0;
+//  }
+//
+//  @include media-breakpoint-down(sm) {
+//    padding: 48px 0;
+//  }
+//
+//  &__title {
+//    font-weight: 700;
+//    font-size: 40px;
+//    line-height: 62px;
+//    text-align: center;
+//    text-transform: uppercase;
+//    color: #001E40;
+//    margin-bottom: 35px!important;
+//
+//    @include media-breakpoint-down(lg) {
+//      margin-bottom: 32px!important;
+//      line-height: 49px;
+//    }
+//
+//    @include media-breakpoint-down(md) {
+//      font-size: 28px;
+//      line-height: 34px;
+//    }
+//
+//    @include media-breakpoint-down(sm) {
+//      margin-bottom: 16px!important;
+//    }
+//  }
+//
+//  &__subtitle {
+//    font-weight: 500;
+//    font-size: 24px;
+//    line-height: 40px!important;
+//    text-align: center;
+//    color: #161616;
+//
+//    @include media-breakpoint-down(md) {
+//      font-size: 16px;
+//      line-height: 30px!important;
+//    }
+//
+//    @include media-breakpoint-down(sm) {
+//      margin-bottom: 16px!important;
+//    }
+//  }
+//}
+
+.section {
+  padding: 80px 0;
+
+  @include media-breakpoint-down(sm) {
+    padding: 50px 0;
+  }
+
+  &__title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 49px;
+    text-align: center;
+    color: $color-dark;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 32px;
+      line-height: 39px;
+    }
+
+    @include media-breakpoint-down(sm) {
+      font-size: 30px;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.45em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+
+    //@include media-breakpoint-up(lg) {
+    //  display: none;
+    //}
+  }
+
+  &__description {
+    @include media-breakpoint-down(md) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+  }
+
+  &__img {
+    @include media-breakpoint-down(sm) {
+      margin: 0 auto 32px;
+      display: block;
+    }
+  }
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 400;
+  line-height: 2.875rem;
+  margin: 0;
+}
+
+.button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #ffffff;
+  border: 0;
+  border-radius: 8px;
+  padding: 14px 23px;
+  transition: 0.15s ease-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &_green {
+    background: $color-green;
+    color: $color-white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 20px;
+
+    &:hover {
+      background: darken($color-green, 5%);
+      color: $color-white;
+    }
+  }
+
+  &_transparent {
+    background-color: transparent;
+    border: 2px solid #8920AD;
+    color: #8920AD;
+    transition: background-color 0.15s ease-out;
+
+    &:hover {
+      background-color: #8920AD;
+      color: $color-white;
+    }
+  }
+
+  &_start {
+    background: linear-gradient(135deg, #8920AD 0%, #5C1574 100%);
+    border-radius: 6px;
+    box-shadow: 8px 8px 24px rgba(189, 52, 126, 0.25);
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    padding: 24px 88px;
+    transition: 0.15s ease-out;
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: none;
+      color: $color-white;
+    }
+  }
+
+  &_create {
+    background-color: #12151A;
+    font-weight: 700;
+    padding: 24px;
+    box-shadow: 15px 15px 32px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.15s ease-out;
+
+    &:hover {
+    }
+  }
+
+  &_reg {
+    background-color: #8920AD;
+    font-weight: 700;
+    padding: 24px 43px;
+    box-shadow: 15px 15px 32px rgba(0, 0, 0, 0.15);
+    transition: background-color 0.15s ease-out;
+    color: #ffffff!important;
+  }
+
+  &_choose {
+    background-color: #06873e;
+
+    &:hover {
+      background-color: darken(#06873e, 3%);
+      color: $color-white;
+    }
+  }
+}
+
+.order-first {
+  order: 0!important;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.text-blue-light {
+  color: #8920AD;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.has-sub {
+  position: relative;
+
+  &::after {
+    content: url("../img/arrow-down.svg");
+    position: absolute;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-green {
+  color: $color-green;
+}
+
+.calc__img {
+  margin-bottom: 11px!important;
+  margin-left: 100px!important;
+}
+
+.reference__img {
+  margin-bottom: 15px!important;
+  margin-left: 0!important;
+}
+
+.swfx__img {
+  margin-bottom: 25px!important;
+  margin-left: 55px!important;
+}
+
+.market-review__img {
+  margin-bottom: 31px!important;
+  margin-left: 55px!important;
+}
+
+.historical-index__img {
+  margin-bottom: 7px!important;
+  margin-left: 0!important;
+}
+
+.courses-table__img {
+  margin-bottom: 23px!important;
+  margin-left: 90px!important;
+}
+
+.forex-trading-session-schedule__img {
+  margin-bottom: 23px!important;
+}
+
+.signals__img {
+  margin-bottom: 0!important;
+}
+
+.signals-second__img {
+  position: absolute;
+  margin-bottom: 19px!important;
+  margin-left: -62px!important;
+}
+
+.contacts__img {
+  margin-bottom: 25px!important;
+}
+
+.legal__img{
+  margin-bottom: 15px!important;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.scroll-to-top {
+  position: relative;
+}
+
+.btn-position {
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  z-index: 20;
+}
+
+.btn-style {
+  background-color: #551b54;
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+  color: #ceb8f1;
+  cursor: pointer;
+  transition: all 0.15s ease-out;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+
+  &:hover {
+    background-color: #461045;
+  }
+}
+
+.i {
+  &-subtitle {
+    font-weight: 700;
+    margin: 40px 0;
+  }
+
+  p {
+    font-size: 20px;
+    margin-top: 20px!important;
+    margin-bottom: 20px!important;
+    line-height: 32px!important;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include media-breakpoint-down(md) {
+      text-align: left!important;
+    }
+  }
+
+  img {
+    margin: 10px 0;
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 40px;
+    margin-bottom: 30px;
+    font-size: 19px;
+  }
+
+  span {
+    display: block;
+  }
+}
+
+.services-page {
+  position: relative;
+  overflow-x: hidden;
+  background: rgb(137,32,173);
+  background: radial-gradient(circle, rgba(137,32,173,0.25) 22%, rgba(31,42,56,1) 98%);
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+@import "header.scss";
+@import "hero.scss";
+@import "greeting.scss";
+@import "instruments.scss";
+@import "accounts.scss";
+@import "benefits.scss";
+@import "access.scss";
+@import "payment-systems.scss";
+@import "see-for-yourself.scss";
+@import "about-section.scss";
+@import "about-cards.scss";
+@import "about-targets.scss";
+@import "benefits-list.scss";
+@import "accounts-security-cards.scss";
+@import "regulation-benefits.scss";
+@import "certificate.scss";
+@import "private-club.scss";
+@import "awaiting.scss";
+
+@import "components/page-title.scss";
+@import "components/page-header.scss";
+
+
+
+
+/////
+
+
+@import "earn.scss";
+@import "system.scss";
+@import "easy.scss";
+@import "literacy.scss";
+@import "partners.scss";
+@import "journey.scss";
+@import "payment.scss";
+@import "potential.scss";
+@import "potential-news.scss";
+@import "news.scss";
+@import "latest-news.scss";
+@import "fundamental.scss";
+@import "fundamental-news.scss";
+@import "technical.scss";
+@import "technical-news.scss";
+
+@import "courses-hero.scss";
+@import "in-numbers.scss";
+@import "opportunity.scss";
+@import "develop.scss";
+@import "questions.scss";
+@import "course-start-hero.scss";
+@import "course-pro-hero.scss";
+@import "course-cryptocurrency-hero.scss";
+@import "course.scss";
+@import "payment-methods-hero.scss";
+@import "payment-methods.scss";
+
+@import "holidays-hero.scss";
+@import "holidays.scss";
+@import "interest-rate-hero.scss";
+@import "interest-rate.scss";
+@import "economic-calendar-hero.scss";
+@import "account-types-hero.scss";
+@import "account-table.scss";
+@import "account-list.scss";
+@import "pamm.scss";
+@import "faq-section.scss";
+@import "legal.scss";
+
+// coin
+@import "capabilities.scss";
+@import "instruments.scss";
+@import "trusted.scss";
+@import "signals.scss";
+@import "different.scss";
+@import "stats.scss";
+@import "withdrawal.scss";
+@import "text-page.scss";
+@import "service.scss";
+@import "about-us.scss";
+@import "who-we-are.scss";
+@import "principles.scss";
+@import "our-goal.scss";
+@import "beginners.scss";
+@import "advices.scss";
+@import "registration.scss";
+@import "kyc.scss";
+@import "contacts-content.scss";
+
+@import "components/page-hero.scss";
+@import "components/pagination.scss";
+@import "components/keyframes.scss";
+@import "components/preloader.scss";
+@import "components/popup.scss";
+@import "components/privacy-popup.scss";
+
+@import "footer.scss";

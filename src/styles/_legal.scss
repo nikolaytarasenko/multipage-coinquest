@@ -1,0 +1,52 @@
+.legal {
+  p {
+    margin-bottom: 20px;
+
+    @include media-breakpoint-down(sm) {
+      text-align: left!important;
+    }
+  }
+
+  ul {
+    list-style: disc;
+    padding-left: 40px;
+  }
+
+  .nav {
+    flex: 1;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      margin-right: 0!important;
+      margin-bottom: 30px;
+    }
+
+    .nav-link {
+      height: 65px;
+      background: #ecf6ff;
+      transition: 0.15s ease-out;
+
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      &:hover {
+        background: #d1e7fb;
+      }
+
+      &.active {
+        background: #001e40!important;
+      }
+    }
+  }
+
+  .tab-content {
+    flex: 2;
+  }
+
+  &__content {
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+}

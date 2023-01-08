@@ -1,0 +1,28 @@
+.accounts-security-cards {
+  .card {
+    padding: 50px 75px;
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+    border: 3px solid #009432;
+    box-shadow: 0 10px 50px #4E4E4E;
+    border-radius: 30px;
+  }
+
+  .card-body {
+    padding: 0;
+  }
+
+  .card-title {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 140%;
+    color: $color-green;
+    margin-bottom: 35px;
+    text-align: center;
+  }
+
+  .card-img-top {
+    margin-bottom: 35px;
+  }
+}

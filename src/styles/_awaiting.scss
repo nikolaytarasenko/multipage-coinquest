@@ -1,0 +1,39 @@
+.awaiting {
+  &__title {
+    margin-bottom: 80px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 120px 90px;
+  }
+
+  &__item {
+    display: grid;
+    grid-template-columns: 108px 1fr;
+    grid-column-gap: 20px;
+    max-width: 650px;
+    width: 100%;
+    align-items: center;
+    background: #FFFFFF;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 40px;
+
+    &-title {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      color: $color-dark;
+      margin-bottom: 15px;
+    }
+
+    &-text {
+      font-weight: 300;
+      font-size: 17px;
+      line-height: 21px;
+      color: $color-dark;
+    }
+  }
+}

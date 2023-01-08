@@ -1,0 +1,130 @@
+.registration {
+  &__form {
+    padding: 32px 24px;
+    background: rgba(33, 33, 33, 0.8);
+    border-radius: 8px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 32px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  .form-control {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    padding: 18px 20px;
+    color: #ffffff;
+
+    &:focus + {
+      label[for="validationCustom01"] {
+        background: url("../img/form1-1.svg") 20px center no-repeat;
+      }
+
+      label[for="validationCustom02"] {
+        background: url("../img/form2-2.svg") 20px center no-repeat;
+      }
+
+      label[for="validationCustom03"] {
+        background: url("../img/form3-3.svg") 20px center no-repeat;
+      }
+
+      select#validationCustom04 {
+        background: url("../img/form4-4.svg") 20px center no-repeat;
+      }
+
+      label {
+        padding-left: 40px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .form-select {
+    background-color: rgba(33,33,33,.4);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    color: rgba(255, 255, 255, 0.4);
+    padding: 18px 20px 18px 56px;
+    position: relative;
+  }
+
+  .form-floating > label {
+    top: 0;
+    left: 10px;
+    padding-left: 55px;
+  }
+
+  .select-label {
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 55px;
+      width: 20px;
+      height: 20px;
+      background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23343a40' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e") center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  .form-select option {
+    color: #d9d9d9;
+    background: #262626;
+  }
+
+  .form-check-input {
+    background: rgba(255, 255, 255, 0.4);
+  }
+
+  .form-check-input:checked {
+    background-color: #8920AD;
+    border-color: #8920AD;
+  }
+
+  .form-check-label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .form-label {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 25px;
+    color: rgba(255, 255, 255, 0.4);
+  }
+
+  .form-floating>.form-control:not(:placeholder-shown)~label,
+  .form-floating>.form-control:focus~label {
+    transform: scale(0.6) translateY(-.5rem) translateX(.15rem);
+    color: #8920AD;
+    left: 18px;
+  }
+
+  label[for="validationCustom01"] {
+    background: url("../img/form1.svg") 20px center no-repeat;
+  }
+
+  label[for="validationCustom02"] {
+    background: url("../img/form2.svg") 20px center no-repeat;
+  }
+
+  label[for="validationCustom03"] {
+    background: url("../img/form3.svg") 19px 13px no-repeat;
+  }
+
+  select#validationCustom04 {
+    background: url("../img/form4.svg") 20px center no-repeat;
+  }
+
+  .button_reg {
+    width: 100%;
+  }
+}

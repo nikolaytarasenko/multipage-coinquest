@@ -1,0 +1,159 @@
+.withdrawal {
+  &__title {
+    position: relative;
+    max-width: 690px;
+    margin: 0 auto 80px;
+
+    &::before {
+      display: none;
+      content: '';
+      position: absolute;
+      left: -138px;
+      top: -30px;
+      width: 180px;
+      height: 180px;
+      background: url("../img/withdrawal-decor.png") center no-repeat;
+      background-size: cover;
+
+      @include media-breakpoint-down(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-down(md) {
+      flex-direction: column;
+      gap: 50px;
+    }
+  }
+
+  &__item {
+    position: relative;
+    max-width: 378px;
+    width: 100%;
+    padding: 120px 32px;
+
+    @include media-breakpoint-down(md) {
+      padding: 120px 25px;
+    }
+
+    &_left {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 32px 0 0 32px;
+      border-right: 2px solid #51273E;
+
+      @include media-breakpoint-down(md) {
+        border-radius: 32px;
+        border-right: 0;
+      }
+
+      .withdrawal__item-decor--big {
+        left: -89px;
+        top: -12px;
+      }
+
+      .withdrawal__item-decor--small {
+        right: -30px;
+        bottom: 18px;
+        display: none;
+
+        @include media-breakpoint-down(sm) {
+          right: -13px;
+          display: block;
+        }
+      }
+    }
+
+    &_right {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 0 32px 32px 0;
+      border-left: 2px solid #51273E;
+
+      @include media-breakpoint-down(md) {
+        border-radius: 32px;
+        border-left: 0;
+      }
+
+      .withdrawal__item-name {
+        font-weight: 600;
+      }
+
+      .withdrawal__item-decor--big {
+        bottom: -39px;
+        right: -48px;
+
+        @include media-breakpoint-down(sm) {
+          right: -9px;
+          bottom: unset;
+          top: 10px;
+        }
+      }
+
+      .withdrawal__item-decor--small {
+        left: -30px;
+        bottom: 18px;
+        display: none;
+
+        @include media-breakpoint-down(sm) {
+          bottom: 6px;
+          left: -39px;
+          display: block;
+        }
+      }
+    }
+
+    .withdrawal__item-decor--small,
+    .withdrawal__item-decor--big {
+      position: absolute;
+      @include media-breakpoint-up(lg) {
+        //display: none;
+      }
+    }
+  }
+
+  &__item-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__item-icon {
+    margin-bottom: 20px;
+  }
+
+  &__item-title {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-bottom: 20px;
+  }
+
+  &__item-list {
+    list-style-position: inside;
+    list-style-type: disc;
+    padding-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__item-name {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    text-align: center;
+  }
+
+  &__button-wrapper {
+    margin-top: 88px;
+    text-align: center;
+  }
+}

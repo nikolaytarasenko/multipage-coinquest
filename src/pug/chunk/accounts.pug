@@ -1,0 +1,43 @@
+section.section.accounts
+    .container
+        .row
+            .col-md-12
+                h2.section__title.accounts__title Торговый счет для любых целей
+                .card.p-3.shadow
+                    nav
+                        #nav-tab.nav.nav-tabs.mb-3(role='tablist')
+                            button#nav-test-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#nav-test' type='button' role='tab' aria-controls='nav-test' aria-selected='true') Test
+                            button#nav-basic-tab.nav-link(data-bs-toggle='tab' data-bs-target='#nav-basic' type='button' role='tab' aria-controls='nav-basic' aria-selected='false') Basic
+                            button#nav-standard-tab.nav-link(data-bs-toggle='tab' data-bs-target='#nav-standard' type='button' role='tab' aria-controls='nav-standard' aria-selected='false') Standard
+                            button#nav-standard-advanced-tab.nav-link(data-bs-toggle='tab' data-bs-target='#nav-standard-advanced' type='button' role='tab' aria-controls='nav-standard-advanced' aria-selected='false') Standard
+                    #nav-tabContent.tab-content.p-3.border.bg-light
+                        #nav-test.tab-pane.fade.active.show(role='tabpanel' aria-labelledby='nav-home-tab')
+                            .accounts__row
+                                .accounts__img-wrapper
+                                    img.accounts__img(src="./img/accounts-test.png" alt="Тест")
+                                .accounts__content
+
+                        #nav-basic.tab-pane.fade(role='tabpanel' aria-labelledby='nav-profile-tab')
+                            p
+                                strong This is some placeholder content the Profile tab's associated content.
+                                |                    Clicking another tab will toggle the visibility of this one for the next.
+                                |                    The tab JavaScript swaps classes to control the content visibility and styling. You can use it with
+                                |                    tabs, pills, and any other
+                                code .nav
+                                | -powered navigation.
+                        #nav-standard.tab-pane.fade(role='tabpanel' aria-labelledby='nav-contact-tab')
+                            p
+                                strong This is some placeholder content the Contact tab's associated content.
+                                |                    Clicking another tab will toggle the visibility of this one for the next.
+                                |                    The tab JavaScript swaps classes to control the content visibility and styling. You can use it with
+                                |                    tabs, pills, and any other
+                                code .nav
+                                | -powered navigation.
+                        #nav-standard.tab-pane.fade(role='tabpanel' aria-labelledby='nav-contact-tab')
+                            p
+                                strong This is some placeholder content the Contact tab's associated content.
+                                |                    Clicking another tab will toggle the visibility of this one for the next.
+                                |                    The tab JavaScript swaps classes to control the content visibility and styling. You can use it with
+                                |                    tabs, pills, and any other
+                                code .nav
+                                | -powered navigation.

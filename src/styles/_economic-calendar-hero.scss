@@ -1,0 +1,33 @@
+.economic-calendar-hero {
+  padding: 0;
+  background: #001E40;
+
+  &__content {
+    min-height: 440px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 59px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 0;
+    margin-top: 135px;
+  }
+
+  &__img-wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  &__img {
+    margin-bottom: 42px;
+    margin-left: 30px;
+    mix-blend-mode: color-dodge;
+  }
+}

@@ -1,0 +1,29 @@
+.faq-section {
+  &__item {
+    margin-bottom: 50px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 39px;
+    color: #9c61d5;
+    margin-bottom: 15px;
+
+    @include media-breakpoint-down(sm) {
+      text-align: left!important;
+      line-height: 33px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+
+    @include media-breakpoint-down(sm) {
+      text-align: left!important;
+    }
+  }
+}

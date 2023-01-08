@@ -1,0 +1,99 @@
+.account-table {
+  .table-responsive {
+    td,
+    th {
+      width: 200px;
+    }
+
+    th {
+      .account-table__cell {
+        background: #E0EBFF;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        color: #00346D;
+
+        @include custom(1399) {
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+          justify-content: center;
+          font-size: 13px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    thead {
+      th {
+        text-transform: uppercase;
+      }
+    }
+
+    thead {
+      th:nth-child(2) {
+        @include media-breakpoint-down(lg) {
+          padding-left: 140px;
+        }
+      }
+    }
+
+    tbody {
+      th {
+        @include media-breakpoint-down(lg) {
+          position: absolute;
+          padding-left: 0;
+        }
+      }
+
+      th:nth-child(1) {
+        @include media-breakpoint-down(lg) {
+          width: 150px;
+        }
+      }
+
+      td:nth-child(2) {
+        @include media-breakpoint-down(lg) {
+          padding-left: 140px;
+        }
+      }
+    }
+  }
+
+  &__cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 112px;
+    background: #EEF4FF;
+    border-radius: 4px;
+    text-align: center;
+    padding: 16px 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    color: #00346D;
+  }
+
+  &__table-row-title {
+    .account-table__cell {
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .account-table__table-icon {
+      margin-right: 16px;
+      margin-left: 20px;
+
+      @include custom(1399) {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+
+      @include media-breakpoint-down(lg) {
+        max-width: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.benefits-list {
+  &__row {
+    background: linear-gradient(88.41deg, rgba(255, 255, 255, 0.2) 38.33%, rgba(0, 148, 50, 0.2) 101.1%), #FFFFFF;
+    padding: 45px 0 0;
+    margin-bottom: 150px;
+  }
+
+  .row {
+    align-items: center;
+  }
+
+  &__title {
+    color: $color-green;
+    margin-bottom: 30px;
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 140%;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 140%;
+    color: #000000;
+  }
+}

@@ -1,0 +1,101 @@
+.technical-news {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 90px;
+    grid-row-gap: 30px;
+
+    @include media-breakpoint-down(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__post {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__img-wrapper {
+    margin-bottom: 15px;
+  }
+
+  &__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__post-img {
+    border-radius: 8px;
+
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+    }
+  }
+
+  &__post-date {
+    padding: 8px;
+    background: #43204e;
+    border-radius: 2px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+
+    svg {
+      margin-right: 8px;
+    }
+  }
+
+  &__post-title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #8920AD;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 8px;
+
+    @include media-breakpoint-down(md) {
+      text-align: left!important;
+    }
+  }
+
+  &__post-excerpt {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: #ffffff;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin-bottom: 8px;
+
+    @include media-breakpoint-down(md) {
+      text-align: left!important;
+    }
+  }
+
+  &__btn {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    text-transform: uppercase;
+    color: #1C5FE0;
+    padding: 13px 32px;
+  }
+
+  &__pagination {
+    margin-top: 40px;
+    justify-content: center;
+  }
+}

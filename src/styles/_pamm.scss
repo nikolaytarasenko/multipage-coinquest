@@ -1,0 +1,56 @@
+.pamm {
+  padding-top: 0;
+
+  &__title {
+    margin-bottom: 40px;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 40px!important;
+    }
+  }
+
+  .card {
+    background: linear-gradient(345.24deg, rgba(33, 50, 68, 0.31) 0%, rgba(28, 95, 224, 0) 100%), rgba(26, 18, 21, 0.5);
+    border-radius: 16px;
+    text-align: center;
+    border: 0;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 32px;
+    }
+
+    .list-group,
+    .list-group-item {
+      background: transparent;
+    }
+
+    .list-group-item {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 20px;
+      padding: 16px 0;
+      color: #FFFFFF;
+      border-color: rgba(#ffffff, 0.5);
+    }
+
+    .list-group {
+      margin-bottom: 40px;
+    }
+  }
+
+  .card-body {
+    padding: 32px 34px 50px;
+  }
+
+  .card-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 44px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+  }
+
+  .card-icon {
+    margin-bottom: 30px;
+  }
+}

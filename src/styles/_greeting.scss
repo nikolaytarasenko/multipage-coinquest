@@ -1,0 +1,55 @@
+.greeting {
+  &__title {
+    font-weight: 800;
+    font-size: 65px;
+    line-height: 48px;
+    margin-bottom: 40px;
+    color: $color-dark;
+  }
+
+  &__brand-title {
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 48px;
+    text-align: center;
+    color: $color-green;
+    margin-bottom: 30px;
+
+    span {
+      color: $color-yellow;
+    }
+  }
+
+  &__subtitle {
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 140%;
+    color: $color-dark;
+    text-align: center;
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  &__content-row {
+    margin-top: 145px;
+  }
+
+  &__content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  &__text {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    margin-bottom: 105px;
+
+    span {
+      display: block;
+    }
+  }
+}

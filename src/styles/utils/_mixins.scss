@@ -1,0 +1,6 @@
+// Custom devices
+@mixin custom($screen) {
+  @media (max-width: $screen+'px') {
+    @content;
+  }
+}

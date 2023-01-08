@@ -1,0 +1,11 @@
+extends layout/app
+
+block variables
+    - var title = 'О компании | Coinquest'
+    - var pageClass = 'about-page'
+
+block page
+    include chunk/about-title
+    include chunk/about-section
+    include chunk/about-cards
+    include chunk/about-targets

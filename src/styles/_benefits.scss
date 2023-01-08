@@ -1,0 +1,39 @@
+.benefits {
+  &__card {
+    text-align: center;
+    margin-bottom: 170px;
+  }
+
+  &__card-text {
+    font-weight: 300;
+    font-size: 25px;
+    line-height: 120%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+
+  &__card-link {
+    display: flex;
+    justify-content: flex-start;
+    color: $color-green;
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 120%;
+  }
+
+  &__card-icon {
+    margin-bottom: 40px;
+  }
+
+  &__card-title {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 120%;
+    color: #35465B;
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 160px;
+  }
+}

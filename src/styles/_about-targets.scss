@@ -1,0 +1,10 @@
+.about-targets {
+  .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    background-color: $color-green;
+    color: $color-white;
+  }
+
+  .nav-link {
+    color: $color-green;
+  }
+}

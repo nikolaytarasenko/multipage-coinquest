@@ -1,0 +1,72 @@
+.privacy-popup {
+  position: fixed;
+  max-width: 694px;
+  left: 10px;
+  bottom: 10px;
+  background: #1A1219;
+  backdrop-filter: blur(18px);
+  padding: 18px 24px;
+  border-radius: 12px;
+  transition: 0.4s ease-out;
+
+  @include media-breakpoint-down(md) {
+    right: 10px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 10px;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    @include media-breakpoint-down(sm) {
+      flex-direction: column;
+    }
+  }
+
+  &__left {
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__text {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px!important;
+    color: #ffffff;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 11px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__button {
+    padding: 8px 20px!important;
+
+    @include media-breakpoint-down(sm) {
+      padding: 6px 14px!important;
+      font-size: 13px;
+    }
+
+    &_transparent {
+      border: 2px solid rgba(#8920AD, 0.6);
+      margin-left: 20px;
+
+      @include media-breakpoint-down(sm) {
+        margin-left: 10px;
+      }
+    }
+  }
+}
